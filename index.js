@@ -234,7 +234,7 @@ const buildTeam = () => {
         fs.mkdirSync(output_dir)
     }
     fs.writeFileSync(outputPath, render(teamArray), 'utf-8')
-    console.log('Success! You may view your generated HTML page in the dist folder.')
+    console.log('Your team profile is complete! Your generated HTML page is available in the dist folder.')
 }
 addManager();
 

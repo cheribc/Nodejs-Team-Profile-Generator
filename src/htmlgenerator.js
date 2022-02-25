@@ -7,7 +7,7 @@ const generateTeam = team => {
                     <div class='card-header pb-1 rounded-top'>
                         <h2>${manager.getName()}</h2>
                         <hr>
-                        <h4><i class="fas fa-crown"></i> Manager</h4>
+                        <h4><i class="fa-solid fa-phone-office"></i>Manager</h4>
                     </div>
                     <ul class='list-group list-group-flush'>
                         <li class='list-group-item'>Employee ID: ${manager.getId()}</li>
@@ -42,7 +42,7 @@ const generateTeam = team => {
                 <div class='card-header pb-1 rounded-top'>
                     <h2>${intern.getName()}</h2>
                     <hr>
-                    <h4><i class="fas fa-child"></i> Intern</h4>
+                    <h4><i class="fa-solid fa-mobile-screen"></i> Intern</h4>
                 </div>
                 <ul class='list-group list-group-flush'>
                     <li class='list-group-item'>Employee ID: ${intern.getId()}</li>
@@ -75,7 +75,7 @@ module.exports = team => {
 <body>
     <nav class='navbar mb-3 py-4'>
         <div class='container-fluid justify-content-center'>
-            <span class='navbar-brand mb-0 text-light'><h1><i class="fas fa-sitemap"></i> My Team <i class="fas fa-sitemap"></i></h1></span>
+            <span class='navbar-brand mb-0 text-light'><h1><i class="fa-solid fas-display-code"></i> My Team <i class="fa-solid fas-display-code"></i></h1></span>
         </div>
     </nav>
     <main>
