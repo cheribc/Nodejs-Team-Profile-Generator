@@ -13,7 +13,7 @@ const output_dir = path.resolve(__dirname, "dist");
 const outputPath = path.join(output_dir, "team.html");
 const render = require("./src/htmlgenerator.js");
 
-
+// Use inquirer to prompt the user for the employee information
 const addManager = () => {
     return inquirer
         .prompt([{
@@ -24,6 +24,7 @@ const addManager = () => {
                     if (nameInput) {
                         return true;
                     } else {
+                        // If user skips this step, they will see the following message to ask them to continue
                         console.log(" Please enter the manager's name to continue.");
                         return false;
                     }
@@ -43,7 +44,6 @@ const addManager = () => {
                     } else
                         return true;
                 }
-
 
             },
             {
@@ -75,6 +75,7 @@ const addManager = () => {
                 }
             }
         ])
+        // Values to be displayed as output on profile card
         .then(managerInput => {
             const { name, id, email, officeNumber } = managerInput;
             const manager = new Manager(name, id, email, officeNumber);
@@ -84,6 +85,7 @@ const addManager = () => {
             addEmployee();
         })
 };
+// Inquirer prompts for additional team members after manager's information is collected, to choose employee role of Engineer or Intern, with the appropriate prompts for each role type
 const addEmployee = () => {
     return inquirer.prompt([{
         type: "list",
@@ -229,6 +231,7 @@ const addIntern = () => {
         addEmployee();
     })
 };
+// Function to create team profile generated HTML in the /dist folder
 const buildTeam = () => {
     if (!fs.existsSync(output_dir)) {
         fs.mkdirSync(output_dir)
