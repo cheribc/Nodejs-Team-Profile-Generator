@@ -41,6 +41,8 @@ This is a Node.js command-line application that takes in information about a sof
 
 [cheribc](https://github.com/cheribc)
 
+[Link to app demo video walk-through](https://youtu.be/6xVpUHzHkKY)
+
 ---
 #### License
 
